@@ -41,12 +41,12 @@ header .header-text {
   display: flex;
   height: 430px;
   width: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -54,6 +54,7 @@ header .header-text {
   color: white;
   font-size: 25px;
   letter-spacing: 2px;
+  text-align: center;
 }
 
 nav {
@@ -98,7 +99,7 @@ nav a:hover {
 }
 
 .container-about .contain-text h3 span {
-  background: #646464;
+  background: #348ECA;
   color: white;
   border-radius: 50%;
   display: inline-block;
@@ -136,10 +137,294 @@ nav a:hover {
           box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5);
 }
 
+.portfolio .gallery .image-port:hover .hover-gallery {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
 .portfolio .gallery .image-port img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   display: block;
+}
+
+.portfolio .gallery .image-port .hover-gallery {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  background: rgba(255, 255, 255, 0.8);
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.portfolio .gallery .image-port .hover-gallery img {
+  width: 50px;
+}
+
+.cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.cards .card {
+  background: #348eca;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 46%;
+  height: 200px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6);
+          box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6);
+}
+
+.cards .card img {
+  width: 100px;
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  display: block;
+}
+
+.cards .card h4 {
+  font-size: 20px;
+}
+
+.cards .card .contain-text-card {
+  width: 60%;
+  color: white;
+}
+
+.about-services {
+  background: #f2f2f2;
+  padding-bottom: 30px;
+}
+
+.about-services .service-cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about-services .service-cont .services-ind {
+  width: 28%;
+  text-align: center;
+}
+
+.about-services .service-cont .services-ind img {
+  width: 90%;
+}
+
+.about-services .service-cont .services-ind h3 {
+  margin: 10px 0;
+}
+
+.about-services .service-cont .services-ind p {
+  font-weight: 300;
+}
+
+footer {
+  background: #414141;
+  padding: 60px 0 30px 0;
+  margin: auto;
+  overflow: hidden;
+}
+
+footer .container-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 90%;
+  margin: auto;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #ccc;
+}
+
+footer .container-footer .content-footer {
+  text-align: center;
+}
+
+footer .container-footer .content-footer h4 {
+  color: white;
+  border-bottom: 3px solid #348ECA;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+footer .container-footer .content-footer p {
+  color: #ccc;
+}
+
+footer .final-title {
+  text-align: center;
+  font-size: 22px;
+  margin: 20px 0 0 0;
+  color: #9e9797;
+}
+
+@media screen and (max-width: 900px) {
+  header {
+    background-position: center;
+  }
+  .container-about {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .container-about .contain-text {
+    width: 90%;
+  }
+  .container-about .img-about-us {
+    width: 80%;
+    padding-bottom: 40px;
+  }
+  .portfolio .gallery .image-port {
+    width: 44%;
+  }
+  .cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .cards .card {
+    width: 90%;
+  }
+  .cards .card:first-child {
+    margin-bottom: 30px;
+  }
+  .about-services .service-cont {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .about-services .service-cont .services-ind {
+    width: 100%;
+    text-align: center;
+  }
+  .about-services .service-cont .services-ind:nth-child(1), .about-services .service-cont .services-ind:nth-child(2) {
+    margin-bottom: 60px;
+  }
+  .about-services .service-cont .services-ind img {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  nav {
+    text-align: center;
+    padding: 30px 0 0 0;
+  }
+  nav a {
+    margin-right: 5px;
+  }
+  header .header-text {
+    padding: 10px;
+  }
+  header .header-text h1 {
+    font-size: 35px;
+  }
+  header .header-text h2 {
+    font-size: 20px;
+  }
+  .container-about .contain-text {
+    width: 95%;
+  }
+  .portfolio .gallery .image-port {
+    width: 95%;
+  }
+  .cards .card {
+    height: 350px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .cards .card img {
+    width: 90px;
+    height: 90px;
+  }
+  .cards .card h4, .cards .card p {
+    text-align: center;
+  }
+  .container-footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container-footer .content-footer {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .container-footer .content-footer h4 {
+    border: none;
+  }
+  footer .final-title {
+    font-size: 20px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
